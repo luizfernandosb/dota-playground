@@ -446,10 +446,6 @@ const array = [
 
 ];
 
-console.log(array.length)
-
-let arrayAtualizado = array.length
-
 
 const escolhidos = [];
 
@@ -459,12 +455,11 @@ let heroisRestantes = document.getElementById('herois-restantes')
 let heroisEncontrados = document.getElementById('herois-encontrados')
 let ultimoEncontrado = document.getElementById('ultimo-encontrado')
 
+let heroisRestantesStart = 109
+heroisRestantes.innerHTML = 110
 
-heroisRestantes.innerHTML = array.length
-heroisEncontrados.innerHTML = 
-ultimoEncontrado.src = ''
-
-
+let heroisEncontradosStart = 1
+heroisEncontrados.innerHTML = 0
 
 btnSubmit.addEventListener('click', function showResponse() {
 
@@ -476,6 +471,7 @@ btnSubmit.addEventListener('click', function showResponse() {
   // Verifica se o herói já foi escolhido
   if (escolhidos.some(hero => hero.nome.toLowerCase() === valorEscolhido)) {
     alert('Este herói já foi selecionado');
+    document.getElementById('search').value = ''
     return;
   }
 
@@ -483,7 +479,9 @@ btnSubmit.addEventListener('click', function showResponse() {
   const hero = array.find(hero => hero.nome.toLowerCase() === valorEscolhido);
   if (!hero) {
     alert('Este herói não existe');
+    document.getElementById('search').value = ''
     return;
+    
   }
 
 
@@ -498,10 +496,11 @@ btnSubmit.addEventListener('click', function showResponse() {
   img.classList.add('image')
   img.src = hero.img;
   imgCard.appendChild(img);
-  console.log(hero)
-  console.log(array.length--)
-  heroisRestantes.innerHTML = array.length--
-  heroisEncontrados.innerHTML = escolhidos.length
+
+
+
+  heroisRestantes.innerHTML = heroisRestantesStart--
+  heroisEncontrados.innerHTML = heroisEncontradosStart++
   ultimoEncontrado.innerHTML = hero.nome.toUpperCase()
   
   

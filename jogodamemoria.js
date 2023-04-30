@@ -107,7 +107,7 @@ function escolherCarta() {
             let carta1 = escolhidas[0]
             let carta2 = escolhidas[1]
             
-            if (carta1.hero === carta2.hero) {
+            if (carta1.hero === carta2.hero && carta1 !== carta2 ) {
                 carta1.src = "./images/check.png"
                 carta2.src = "./images/check.png"
                 carta1.style.borde = "5px solid green"
