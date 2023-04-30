@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+
+* {
+    font-family: 'Cinzel', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 100vh;
+    background: url(images/findherobg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 100vw;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-card {
+    width: 128px;
+    height: 72px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+#grade {
+    background: rgba(0, 0, 0, 0.8);
+    max-width: 1000px;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    gap: 10px;
+    row-gap: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    border-radius: 0 0 20px 20px;
+}
+
+.input-container {
+    border-radius: 20px 20px 0 0 ;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    width: 1000px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+input {
+    border-radius: 10px 0 0 10px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    width: 200px;
+    height: 30px;
+}
+
+button {
+    border-radius: 0px 10px 10px 0px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    height: 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+button:hover {
+    cursor: pointer;
+    color: rgb(21, 90, 99);
+}
+
+input:focus {
+    border: 2px rgb(21, 90, 99) solid;
+}
+
+p {
+    color: white;
+}
+
+.status {
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#ultimo-encontrado {
+    width: 64px;
+    height: 36px;
+}
